@@ -291,3 +291,73 @@ ul { list-style: none; }
   font-size: 12px; color: var(--grey);
   margin-top: 20px; line-height: 1.6;
 }
+
+/* ── drinks ── */
+.drinks__headline { margin: 8px 0 clamp(24px, 4vw, 48px); }
+
+.drinks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: var(--border-accent);
+}
+.drinks__col {
+  padding: 20px 24px 20px 0;
+  border-right: 1px solid var(--border);
+}
+.drinks__col:last-child { border-right: none; padding-right: 0; }
+.drinks__col:not(:first-child) { padding-left: 24px; }
+
+.drinks__col-title {
+  font-family: var(--f-mono); font-weight: 600;
+  font-size: 9px; letter-spacing: 0.1em;
+  color: var(--grey); margin-bottom: 14px;
+}
+.drinks__row {
+  display: flex; justify-content: space-between;
+  align-items: baseline; gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+.drinks__row:last-of-type { border-bottom: none; }
+.drinks__name { font-family: var(--f-serif); font-size: 13px; line-height: 1.4; }
+.drinks__price {
+  font-family: var(--f-mono); font-weight: 600;
+  font-size: 12px; white-space: nowrap; flex-shrink: 0;
+}
+.drinks__sub, .drinks__extras {
+  font-family: var(--f-serif); font-style: italic;
+  font-size: 11px; color: var(--grey); line-height: 1.5;
+  margin-top: 10px;
+}
+.drinks__sub-inline {
+  font-family: var(--f-serif); font-style: italic;
+  font-size: 11px; color: var(--grey);
+}
+
+/* ── tablet: 2×2 ── */
+@media (max-width: 1024px) {
+  .drinks {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0;
+  }
+  .drinks__col:nth-child(2) { border-right: none; padding-right: 0; }
+  .drinks__col:nth-child(3) { padding-left: 0; border-right: 1px solid var(--border); padding-right: 24px; border-top: 1px solid var(--border); padding-top: 20px; }
+  .drinks__col:nth-child(4) { border-top: 1px solid var(--border); padding-top: 20px; }
+}
+
+/* ── mobile: 2 columns — hot drinks | signature+kalt+tee ── */
+@media (max-width: 768px) {
+  .drinks {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+  }
+  /* col 1: hot drinks spans all rows on left */
+  .drinks__col:nth-child(1) { grid-column: 1; grid-row: 1 / 4; border-right: 1px solid var(--border) !important; padding-right: 20px; }
+  /* col 2: signature, top-right */
+  .drinks__col:nth-child(2) { grid-column: 2; grid-row: 1; border-right: none; padding-left: 20px; padding-right: 0; }
+  /* col 3: kalt, middle-right */
+  .drinks__col:nth-child(3) { grid-column: 2; grid-row: 2; border-right: none; padding-left: 20px; padding-right: 0; border-top: 1px solid var(--border); padding-top: 20px; }
+  /* col 4: tee, bottom-right */
+  .drinks__col:nth-child(4) { grid-column: 2; grid-row: 3; border-right: none; padding-left: 20px; padding-right: 0; border-top: 1px solid var(--border); padding-top: 20px; }
+}
