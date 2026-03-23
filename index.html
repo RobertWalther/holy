@@ -23,37 +23,19 @@
 <body>
   <nav id="nav">
   <div class="nav__inner container">
-    <a href="#home" class="wordmark nav__wordmark" aria-label="holy coffee — startseite">
-      <span class="wordmark__line">holy</span>
-      <span class="wordmark__line">coffee</span>
+    <div class="nav__brand">
+      <a href="#home" class="wordmark nav__wordmark" aria-label="holy coffee — startseite">
+        <span class="wordmark__line">holy</span>
+        <span class="wordmark__line">coffee</span>
+      </a>
       <span class="nav__rule"></span>
-      <span class="nav__tagline">dein wohlfühlort.</span>
-    </a>
+      <span class="nav__tagline">dein wohlfühlort</span>
+    </div><!-- /.nav__brand -->
     <div class="nav__controls">
-      <ul class="nav__links" role="list">
-        <li><a href="#essen">essen</a></li>
-        <li><a href="#trinken">trinken</a></li>
-        <li><a href="#besuchen">besuchen</a></li>
-      </ul>
-      <a href="#besuchen" class="btn-outline nav__cta">reservieren</a>
-      <button class="nav__burger" id="burger" aria-label="menü öffnen" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="#besuchen" class="btn-yellow nav__cta">reservieren</a>
     </div>
   </div>
 </nav>
-
-<!-- mobile overlay -->
-<div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="navigation" aria-hidden="true">
-  <ul role="list">
-    <li><a href="#essen" class="nav-overlay__link">essen</a></li>
-    <li><a href="#trinken" class="nav-overlay__link">trinken</a></li>
-    <li><a href="#besuchen" class="nav-overlay__link">besuchen</a></li>
-  </ul>
-  <!-- TODO: update href to booking tool URL when confirmed -->
-  <a href="#besuchen" class="btn-yellow nav-overlay__cta">tisch reservieren →</a>
-  <p class="nav-overlay__info">heiligengeiststraße 33 · lüneburg<br>do–mo 9–16 uhr</p>
-</div>
   <main>
     <section id="home" class="hero">
       <div class="container hero__inner">
@@ -62,7 +44,7 @@
           <p class="hero__sub">hausgemachte küche, specialty coffee<br>und ein ort, an dem zeit anders vergeht.</p>
           <div class="hero__actions">
             <!-- TODO: update href to booking tool URL when confirmed -->
-            <a href="#besuchen" class="btn-yellow">tisch reservieren →</a>
+            <a href="#besuchen" class="btn-yellow">reservieren</a>
             <a href="#essen" class="btn-text-link">speisekarte</a>
           </div>
         </div>
@@ -91,108 +73,111 @@
     <section id="essen" class="section section--grey-top reveal">
   <div class="container">
     <span class="section-label">essen</span>
-    <h2 class="section-headline menu__headline">was wir kochen.</h2>
+    <h2 class="section-headline menu__headline">unsere speisen.</h2>
     <div class="menu">
-      <div class="menu__category">brunch</div>
+      <div class="menu__category">brunch bis 14:30</div>
       <div class="menu__row">
         <div class="menu__item-left">
           <span class="menu__name">holy moly</span>
-          <span class="menu__desc">rührei, avocado, sourdough, beilage</span>
+          <span class="menu__desc">joghurt, müsli, obst, nüsse, cranberries, honig</span>
         </div>
-        <span class="menu__price">13,80</span>
+        <span class="menu__price">10,50</span>
       </div>
       <div class="menu__row">
         <div class="menu__item-left">
           <span class="menu__name">avocado sourdough</span>
-          <span class="menu__desc">avocado, sesam, chili, limette</span>
+          <span class="menu__desc">sauerteigbrot, avocado, cherry-tomaten, radieschen, gurke, samen, zitrone, kresse</span>
         </div>
         <span class="menu__price">12,00</span>
       </div>
       <div class="menu__row">
         <div class="menu__item-left">
           <span class="menu__name">eggs benni</span>
-          <span class="menu__desc">pochiertes ei, hollandaise, sourdough</span>
+          <span class="menu__desc">sauerteigbrot / waffel, spinat, schinken, pochierte eier, hollandaise, parmesan, kresse</span>
         </div>
         <span class="menu__price">13,80</span>
       </div>
       <div class="menu__row">
         <div class="menu__item-left">
           <span class="menu__name">avocado & egg</span>
-          <span class="menu__desc">avocado, spiegelei, sourdough</span>
+          <span class="menu__desc">sauerteigbrot, avocado, pochierte eier, schwarzer sesam, feta, zitrone, kresse</span>
         </div>
-        <span class="menu__price">11,50</span>
+        <span class="menu__price">13,50</span>
       </div>
       <div class="menu__row">
         <div class="menu__item-left">
           <span class="menu__name">kimchi sourdough</span>
-          <span class="menu__desc">kimchi, frischkäse, sourdough</span>
+          <span class="menu__desc">sauerteigbrot, avocado, edamame, kimchi, pochierte eier, sesamöl, sesam, koriander</span>
         </div>
-        <span class="menu__price">10,50</span>
+        <span class="menu__price">13,80</span>
       </div>
 
-      <div class="menu__category">süßes</div>
+      <div class="menu__category">sweets</div>
       <div class="menu__row">
         <div class="menu__item-left">
-          <span class="menu__name">waffel</span>
-          <span class="menu__desc">ahornsirup, früchte der saison</span>
+          <span class="menu__name">frische belgische waffel</span>
+          <span class="menu__desc">puderzucker oder zimt & zucker</span>
         </div>
-        <span class="menu__price">8,50</span>
+        <span class="menu__price">4,00</span>
       </div>
       <div class="menu__row">
         <div class="menu__item-left">
           <span class="menu__name">vitrinenkuchen</span>
           <span class="menu__desc">tagesaktuell</span>
         </div>
-        <span class="menu__price">4,50</span>
+        <span class="menu__price"></span>
       </div>
 
-      <p class="menu__extras">+ sourdough 1,50 · + avocado 2,50 · + ei 1,50 · + bacon 2,00</p>
+      <p class="menu__extras">+ ahornsirup / nougat creme 1,50 · + frische früchte 2,50 · + extra waffel 2,90</p>
     </div>
   </div>
 </section>
     <section id="trinken" class="section section--grey-top reveal">
   <div class="container">
     <span class="section-label">trinken</span>
-    <h2 class="section-headline drinks__headline">der kaffee.</h2>
+    <h2 class="section-headline drinks__headline">unsere getränke.</h2>
     <div class="drinks">
       <div class="drinks__col">
-        <div class="drinks__col-title">hot drinks</div>
+        <div class="drinks__col-title">kaffee</div>
         <div class="drinks__row"><span class="drinks__name">espresso</span><span class="drinks__price">2,40 / 3,20</span></div>
-        <div class="drinks__row"><span class="drinks__name">espresso macchiato</span><span class="drinks__price">2,80 / 3,50</span></div>
+        <div class="drinks__row"><span class="drinks__name">espresso macchiato</span><span class="drinks__price">2,90 / 3,60</span></div>
         <div class="drinks__row"><span class="drinks__name">long black</span><span class="drinks__price">3,60 / 4,40</span></div>
-        <div class="drinks__row"><span class="drinks__name">cappuccino</span><span class="drinks__price">3,80 / 4,60</span></div>
-        <div class="drinks__row"><span class="drinks__name">flat white</span><span class="drinks__price">4,10</span></div>
-        <div class="drinks__row"><span class="drinks__name">caffè latte</span><span class="drinks__price">4,20</span></div>
-        <div class="drinks__row"><span class="drinks__name">latte macchiato</span><span class="drinks__price">4,20</span></div>
-        <div class="drinks__row"><span class="drinks__name">osmanthus latte</span><span class="drinks__price">5,20</span></div>
-        <div class="drinks__row"><span class="drinks__name">hot chocolate</span><span class="drinks__price">4,50</span></div>
-        <div class="drinks__extras">+ extra shot 1,00 · + hafermilch 0,50 · + karamell / vanille 0,50</div>
+        <div class="drinks__row"><span class="drinks__name">cappuccino</span><span class="drinks__price">4,00 / 4,80</span></div>
+        <div class="drinks__row"><span class="drinks__name">flat white</span><span class="drinks__price">4,30</span></div>
+        <div class="drinks__row"><span class="drinks__name">caffè latte</span><span class="drinks__price">4,40</span></div>
+        <div class="drinks__row"><span class="drinks__name">latte macchiato</span><span class="drinks__price">4,40</span></div>
+        <div class="drinks__row"><span class="drinks__name">osmanthus latte</span><span class="drinks__price">5,40</span></div>
+        <div class="drinks__extras">extra shot · sahne +1,00 · karamell · vanille +0,50<br>hafer · kokos · mandel · laktosefrei — ohne aufpreis</div>
       </div>
 
       <div class="drinks__col">
-        <div class="drinks__col-title">signature</div>
-        <div class="drinks__row"><span class="drinks__name">matcha latte</span><span class="drinks__price">5,20</span></div>
-        <div class="drinks__row"><span class="drinks__name">iced strawberry matcha latte</span><span class="drinks__price">6,20</span></div>
-        <div class="drinks__row"><span class="drinks__name">chai latte</span><span class="drinks__price">4,50</span></div>
+        <div class="drinks__col-title">specialty</div>
+        <div class="drinks__row"><span class="drinks__name">matcha latte</span><span class="drinks__price">5,40</span></div>
+        <div class="drinks__row"><span class="drinks__name">iced strawberry matcha latte</span><span class="drinks__price">6,40</span></div>
+        <div class="drinks__row"><span class="drinks__name">chai latte</span><span class="drinks__price">4,70</span></div>
+        <div class="drinks__row"><span class="drinks__name">hot chocolate</span><span class="drinks__price">4,70</span></div>
       </div>
 
       <div class="drinks__col">
         <div class="drinks__col-title">kalt</div>
-        <div class="drinks__row"><span class="drinks__name">tafelwasser laut</span><span class="drinks__price">3,50 / 0,5l</span></div>
-        <div class="drinks__row"><span class="drinks__name">tafelwasser leise</span><span class="drinks__price">3,50 / 0,5l</span></div>
+        <div class="drinks__row"><span class="drinks__name">tafelwasser laut · leise</span><span class="drinks__price">3,50 / 0,5l</span></div>
         <div class="drinks__row"><span class="drinks__name">orangensaft</span><span class="drinks__price">3,00 / 0,2l</span></div>
         <div class="drinks__row">
           <span class="drinks__name">schorlen aus lütau<br><span class="drinks__sub-inline">apfel · rhabarber · pink grapefruit · schwarze johannesbeere</span></span>
           <span class="drinks__price">3,60 / 0,33l</span>
         </div>
-        <div class="drinks__row"><span class="drinks__name">fritz — kola · ohne zucker · limo</span><span class="drinks__price">3,60 / 0,33l</span></div>
+        <div class="drinks__row"><span class="drinks__name">fritz — kola · limo</span><span class="drinks__price">3,60 / 0,33l</span></div>
         <div class="drinks__row"><span class="drinks__name">prosecco</span><span class="drinks__price">3,90 / 0,1l</span></div>
       </div>
 
       <div class="drinks__col">
         <div class="drinks__col-title">tee</div>
-        <div class="drinks__row"><span class="drinks__name">tee im becher</span><span class="drinks__price">4,00</span></div>
-        <div class="drinks__sub">oolong (tieguanyin) · frisch (minze, ingwer) · mehr auf anfrage</div>
+        <div class="drinks__row"><span class="drinks__name">mighty green</span><span class="drinks__price">4,00</span></div>
+        <div class="drinks__row"><span class="drinks__name">in the mood for love</span><span class="drinks__price">4,00</span></div>
+        <div class="drinks__row"><span class="drinks__name">golden earl</span><span class="drinks__price">4,00</span></div>
+        <div class="drinks__row"><span class="drinks__name">muse</span><span class="drinks__price">4,00</span></div>
+        <div class="drinks__row"><span class="drinks__name">top of the day</span><span class="drinks__price">4,00</span></div>
+        <div class="drinks__row"><span class="drinks__name">pure prana</span><span class="drinks__price">4,00</span></div>
       </div>
     </div>
   </div>
@@ -204,7 +189,7 @@
             <span class="section-label">besuchen</span>
             <h2 class="section-headline besuchen__headline">wir freuen uns<br>auf dich.</h2>
             <!-- TODO: update href to booking tool URL when confirmed -->
-            <a href="#besuchen" class="btn-yellow">tisch reservieren →</a>
+            <a href="#besuchen" class="btn-yellow">reservieren</a>
           </div>
           <div class="besuchen__right">
             <div class="info-block">
