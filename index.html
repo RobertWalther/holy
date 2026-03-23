@@ -11,7 +11,34 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav id="nav"><!-- task 2 --></nav>
+  <nav id="nav">
+  <div class="nav__inner container">
+    <a href="#home" class="wordmark" aria-label="holy coffee — startseite">
+      <span class="wordmark__line">holy</span>
+      <span class="wordmark__line">coffee</span>
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="#essen">essen</a></li>
+      <li><a href="#trinken">trinken</a></li>
+      <li><a href="#besuchen">besuchen</a></li>
+    </ul>
+    <a href="#besuchen" class="btn-outline nav__cta">reservieren</a>
+    <button class="nav__burger" id="burger" aria-label="menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- mobile overlay -->
+<div class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <ul role="list">
+    <li><a href="#essen" class="nav-overlay__link">essen</a></li>
+    <li><a href="#trinken" class="nav-overlay__link">trinken</a></li>
+    <li><a href="#besuchen" class="nav-overlay__link">besuchen</a></li>
+  </ul>
+  <a href="#besuchen" class="btn-yellow nav-overlay__cta">tisch reservieren →</a>
+  <p class="nav-overlay__info">heiligengeiststraße 33 · lüneburg<br>do–mo 9–16 uhr</p>
+</div>
   <main>
     <section id="home"><!-- task 3 --></section>
     <section id="atmosphaere"><!-- task 4 --></section>

@@ -86,3 +86,75 @@ ul { list-style: none; }
 /* ── reveal animation ── */
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
+
+/* ── nav ── */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  height: var(--nav-h);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+#nav.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--border);
+}
+.nav__inner {
+  height: 100%; display: flex; align-items: center;
+  justify-content: space-between;
+}
+.nav__inner .wordmark { font-size: 14px; }
+
+.nav__links {
+  display: flex; gap: 28px;
+}
+.nav__links a {
+  font-family: var(--f-mono); font-weight: 600;
+  font-size: 11px; letter-spacing: 0.05em;
+  color: var(--grey); transition: color 0.2s;
+}
+.nav__links a:hover { color: var(--black); }
+
+.nav__burger {
+  display: none; flex-direction: column; gap: 5px;
+  width: 24px; padding: 4px 0;
+}
+.nav__burger span {
+  display: block; height: 1.5px; background: var(--black);
+  transition: transform 0.3s, opacity 0.3s;
+  transform-origin: center;
+}
+.nav__burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav__burger.open span:nth-child(2) { opacity: 0; }
+.nav__burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ── mobile overlay ── */
+.nav-overlay {
+  position: fixed; inset: 0; z-index: 199;
+  background: var(--white);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 32px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.nav-overlay.open { opacity: 1; pointer-events: all; }
+.nav-overlay ul { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.nav-overlay__link {
+  font-family: var(--f-serif); font-weight: 400;
+  font-size: clamp(32px, 10vw, 56px);
+  letter-spacing: -0.02em; color: var(--black);
+  transition: color 0.2s;
+}
+.nav-overlay__link:hover { color: var(--grey); }
+.nav-overlay__info {
+  font-family: var(--f-serif); font-style: italic;
+  font-size: 13px; color: var(--grey);
+  text-align: center; line-height: 1.7;
+}
+
+/* ── responsive: hide desktop links on mobile ── */
+@media (max-width: 768px) {
+  .nav__links { display: none; }
+  .nav__cta { display: none; }
+  .nav__burger { display: flex; }
+}
