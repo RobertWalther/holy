@@ -14,7 +14,7 @@
   --pad-y: clamp(40px, 8vw, 80px);
   --max-w: 1280px;
   --nav-h: 64px;
-  --nav-h-open: 160px;
+  --nav-h-open: 240px;
 }
 
 /* ── reset ── */
@@ -112,7 +112,7 @@ ul { list-style: none; }
 }
 
 /* wordmark: full on load, compact on scroll */
-.nav__wordmark { font-size: 40px; transition: font-size 0.35s ease; }
+.nav__wordmark { font-size: 80px; transition: font-size 0.35s ease; }
 #nav.scrolled .nav__wordmark { font-size: 20px; }
 
 .nav__rule {
