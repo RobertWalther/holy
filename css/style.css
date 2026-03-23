@@ -103,7 +103,7 @@ ul { list-style: none; }
   height: 100%; display: flex; align-items: center;
   justify-content: space-between;
 }
-.nav__inner .wordmark { font-size: 14px; }
+.nav__inner .wordmark { font-size: 20px; }
 
 .nav__links {
   display: flex; gap: 28px;
@@ -410,7 +410,7 @@ ul { list-style: none; }
   padding-bottom: clamp(40px, 5vw, 60px);
   border-bottom: 1px solid var(--border);
 }
-.footer__wordmark { font-size: 18px; display: inline-block; margin-bottom: 12px; }
+.footer__wordmark { font-size: 20px; display: inline-block; margin-bottom: 12px; }
 .footer__tagline {
   font-family: var(--f-serif); font-style: italic;
   font-size: 13px; color: var(--grey); line-height: 1.5;
