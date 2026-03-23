@@ -361,3 +361,39 @@ ul { list-style: none; }
   /* col 4: tee, bottom-right */
   .drinks__col:nth-child(4) { grid-column: 2; grid-row: 3; border-right: none; padding-left: 20px; padding-right: 0; border-top: 1px solid var(--border); padding-top: 20px; }
 }
+
+/* ── besuchen ── */
+.besuchen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: start;
+}
+.besuchen__headline { margin: 8px 0 32px; }
+.besuchen__right { display: flex; flex-direction: column; gap: 32px; }
+
+.info-block__label {
+  font-family: var(--f-mono); font-weight: 600;
+  font-size: 9px; letter-spacing: 0.12em;
+  color: var(--grey); display: block; margin-bottom: 8px;
+}
+.info-block__text { font-size: 15px; line-height: 1.65; }
+.info-block__link { border-bottom: 1px solid var(--border); transition: border-color 0.2s; }
+.info-block__link:hover { border-color: var(--black); }
+
+.hours { display: grid; grid-template-columns: auto 1fr; gap: 4px 20px; }
+.hours__row { display: contents; }
+.hours__row dt, .hours__row dd {
+  font-family: var(--f-mono); font-weight: 600;
+  font-size: 13px; line-height: 1.8;
+  grid-column: auto;
+}
+.hours__row--closed dt,
+.hours__row--closed dd {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+  .besuchen { grid-template-columns: 1fr; gap: 40px; }
+}
