@@ -426,14 +426,14 @@ ul { list-style: none; }
 .hours { display: grid; grid-template-columns: auto 1fr; gap: 4px 20px; }
 .hours__row { display: contents; }
 .hours__row dt, .hours__row dd {
-  font-family: var(--f-mono); font-weight: 600;
-  font-size: 13px; line-height: 1.8;
+  font-family: var(--f-serif); font-weight: 400;
+  font-size: 14px; line-height: 1.8;
   grid-column: auto;
 }
+.hours__row dt { color: var(--grey); }
 .hours__row--closed dt,
 .hours__row--closed dd {
-  opacity: 0.3;
-  text-decoration: line-through;
+  color: var(--grey);
 }
 
 @media (max-width: 768px) {
