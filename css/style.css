@@ -144,7 +144,7 @@ ul { list-style: none; }
 .lang-switch {
   font-family: var(--f-mono); font-weight: 600; font-size: 11px;
   letter-spacing: 0.08em; color: var(--grey); transition: color 0.2s, opacity 0.2s;
-  position: fixed; top: 20px; right: var(--pad-x); z-index: 1001;
+  position: absolute; top: 20px; right: var(--pad-x); z-index: 10;
 }
 #nav.cta-visible .lang-switch { opacity: 0; pointer-events: none; }
 .lang-switch:hover { color: var(--black); }
@@ -188,10 +188,10 @@ ul { list-style: none; }
   line-height: 1.05;
   letter-spacing: 0.005em;
   transition: opacity 0.25s ease, max-height 0.3s ease, margin-top 0.3s ease;
-  max-height: 60px; overflow: hidden;
+  max-height: 80px; overflow: visible;
 }
 #nav.scrolled .nav__tagline {
-  opacity: 0; max-height: 0;
+  opacity: 0; max-height: 0; overflow: hidden;
 }
 
 
