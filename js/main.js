@@ -29,3 +29,10 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 reveals.forEach(el => revealObserver.observe(el));
+
+// ── email obfuscation ──
+document.querySelectorAll('.js-mail').forEach(el => {
+  const addr = el.dataset.u + '@' + el.dataset.d;
+  el.href = 'mailto:' + addr;
+  el.textContent = addr;
+});
